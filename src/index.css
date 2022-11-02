@@ -1,13 +1,135 @@
+html {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.grid-container {
+  display: grid;
+  grid-template-areas:
+
+    'main';
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  height: 100%;
+}
+
+header {
+  grid-area: header;
+  background-color: #1778da;
+}
+
+main {
+  grid-area: main;
+}
+
+main .loginform,
+main .inputform {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+}
+
+
+form {
+  width: 30%;
+  border: 1px solid rgb(193, 193, 193);
+  border-radius: 10px;
+}
+
+input[type=text],
+input[type=password],
+input[type=number] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.container {
+  padding: 16px;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid rgb(114, 114, 114);
+}
+
+th,
+td {
+  text-align: left;
+  padding: 16px;
+}
+
+td button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 0;
+  margin: 0 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+}
+
+th {
+  background-color: #04AA6D;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+}
+
+ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  box-sizing: border-box;
+  padding: 20px;
+  background: #fff;
+}
+
+li {
+  list-style: none;
+  margin-right: 20px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+li a {
+  text-decoration: none;
+  color: #1ac;
 }
